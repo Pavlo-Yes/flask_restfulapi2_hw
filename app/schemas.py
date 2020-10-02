@@ -13,7 +13,7 @@ class PetSchema(Schema):
     id = fields.Integer()
     name = fields.String(validate=Length(2, 20, error='name must be 2-20 characters'), required=True)
     animal_type = fields.String(validate=Length(2, 20, error='type must be 2-20 characters'), required=True)
-    owner_id = fields.Integer(required=True)
+    owner_id = fields.Integer()
 
 
 class OwnerSchema(Schema):

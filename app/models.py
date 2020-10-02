@@ -50,10 +50,9 @@ class PetModel(db.Model, MoveDb):
     animal_type = db.Column(db.String(20), nullable=False)
     owner_id = db.Column(db.Integer, db.ForeignKey('owner.id'), nullable=False)
 
-    def __init__(self, name, animal_type, owner_id):
+    def __init__(self, name, animal_type):
         self.name = name
         self.animal_type = animal_type
-        self.owner_id = owner_id
 
 
 class OwnerModel(db.Model, MoveDb):
